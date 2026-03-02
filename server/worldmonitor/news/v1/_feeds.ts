@@ -176,6 +176,15 @@ export const VARIANT_FEEDS: Record<string, Record<string, ServerFeed[]>> = {
     producthunt: [
       { name: 'Product Hunt', url: 'https://www.producthunt.com/feed' },
     ],
+    hardware: [
+      { name: "Tom's Hardware", url: 'https://www.tomshardware.com/feeds/all' },
+      { name: 'SemiAnalysis', url: 'https://www.semianalysis.com/feed' },
+      { name: 'Semiconductor News', url: gn('semiconductor OR chip OR TSMC OR NVIDIA OR Intel when:3d') },
+    ],
+    outages: [
+      { name: 'AWS Status', url: gn('AWS outage OR "Amazon Web Services" down when:1d') },
+      { name: 'Cloud Outages', url: gn('(Azure outage OR "Google Cloud" outage OR Cloudflare outage OR Slack down OR GitHub down) when:1d') },
+    ],
   },
 
   finance: {
